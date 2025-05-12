@@ -5,10 +5,10 @@ import Footer from "@/shared/components/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </div>
   );
 }
