@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="py-5 px-20 text-center text-sm">
+    <div className="py-5 px-20 text-center text-sm bg-[#1a1a1a] text-white">
       <span className="">Caffe TARDE</span>
       <p>1004, Coffee-ro, Caffe-gu, Seoul, Republic of Korea</p>
       <p>

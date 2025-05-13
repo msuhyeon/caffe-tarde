@@ -28,7 +28,7 @@ const CustomCarousel = () => {
   ];
 
   return (
-    <Carousel className="w-full">
+    <Carousel className="w-full py-[80px]">
       <CarouselContent>
         {carouselImages.map((item, index) => (
           <CarouselItem key={index}>

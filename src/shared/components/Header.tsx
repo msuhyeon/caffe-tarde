@@ -1,32 +1,67 @@
+import { useState } from "react";
+import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/shared/components/ui/dropdown-menu";
+import { menuData } from "@/data/menu";
 
 const Header = () => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
-    <div className="py-3 px-20 flex flex justify-between w-full ">
-      <div className="p-2 font-extrabold text-lg orange-400">TARDE COFFEE</div>
-      <nav className="flex items-center cursor-pointer">
-        <ul className="flex gap-5">
-          <li>Menu</li>
-          <li>Drinks</li>
-          <li>Membership</li>
-          <li>Gifticon</li>
-          <li>News</li>
-          <li>Customer</li>
-        </ul>
-      </nav>
-      <DropdownMenu>
-        <DropdownMenuTrigger>Language</DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuItem>한국어</DropdownMenuItem>
-          <DropdownMenuItem>EN</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </div>
+    <header className="bg-white shadow-md w-full z-50 fixed">
+      <div
+        className={`relative  overflow-hidden transition-all duration-300 ${
+          expanded ? "h-[280px] bg-[#f6f5ef]" : "h-[80px]"
+        }`}
+      >
+        <div className="flex justify-between items-center px-20 py-4 h-[80px] w-screen max-h-[270px] py-2">
+          <div className="text-2xl font-extrabold text-black-500">
+            TARDE COFFEE
+          </div>
+          <nav>
+            <ul
+              className="flex gap-5"
+              onMouseEnter={() => setExpanded(true)}
+              onMouseLeave={() => setExpanded(false)}
+            >
+              {menuData.map((menu, index) => (
+                <li
+                  key={index}
+                  className="cursor-pointer relative flex gap-10 hover:font-medium"
+                >
+                  <span className="">{menu.label}</span>
+                  <ul className="absolute left-0 top-full w-full  z-40 pt-7 ">
+                    {menu.subItems.map((sub, subIndex) => (
+                      <li key={subIndex} className="pt-5">
+                        <Link href={sub.linkUrl} className="">
+                          {sub.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <a className="main_link"></a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="flex items-center gap-4">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sm font-medium border px-3 py-1 rounded-md hover:bg-gray-100">
+                Language
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem>한국어</DropdownMenuItem>
+                <DropdownMenuItem>EN</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 };
 
