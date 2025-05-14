@@ -88,6 +88,7 @@ const MonthlyBestMenu = () => {
               <p>{`${formatPrice(item.price)}원`}</p>
               <Button variant="outline">자세히 보기</Button>
             </CardContent>
+            <CardFooter />
           </Card>
         ))}
       </div>
