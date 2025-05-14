@@ -1,21 +1,21 @@
-import Image from "next/image";
+// import Image from "next/image";
 
-type CardItem = {
-  src: string;
-  alt: string;
-  link?: string;
-  desc: string;
-};
+// type CardItem = {
+//   src: string;
+//   alt: string;
+//   link?: string;
+//   desc: string;
+// };
 
 const MonthlyBestMenu = () => {
-  const itemImages: CardItem[] = [
-    {
-      src: "/images/menu/strawberry-latte.png",
-      alt: "딸기라떼",
-      link: "/menu/drink/00000001",
-      desc: "달콤한 딸기와 우유의 조화, 시원하게 즐기세요!",
-    },
-  ];
+  // const itemImages: CardItem[] = [
+  //   {
+  //     src: "/images/menu/strawberry-latte.png",
+  //     alt: "딸기라떼",
+  //     link: "/menu/drink/00000001",
+  //     desc: "달콤한 딸기와 우유의 조화, 시원하게 즐기세요!",
+  //   },
+  // ];
 
   const items: string[] = [
     "딸기 라떼",
@@ -47,7 +47,7 @@ const MonthlyBestMenu = () => {
           >
             <div className="">{item}</div>
             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <p className="text-white text-center px-4">{item.desc}</p>
+              {/* <p className="text-white text-center px-4">{item.desc}</p> */}
             </div>
           </li>
         ))}
