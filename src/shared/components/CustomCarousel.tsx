@@ -17,12 +17,17 @@ const CustomCarousel = () => {
   const carouselImages: BannerItem[] = [
     {
       src: "/images/main_banner_01.png",
-      alt: "신메뉴 출시",
+      alt: "신메뉴 출시 라떼 PC 배너 이미지",
       link: "/menu/new",
     },
     {
       src: "/images/main_banner_02.png",
-      alt: "이달의 이벤트",
+      alt: "이달의 이벤트 PC 배너 이미지",
+      link: "/event",
+    },
+    {
+      src: "/images/main_banner_03.png",
+      alt: "신메뉴 출시 제주 말차 PC 배너 이미지",
       link: "/event",
     },
   ];
