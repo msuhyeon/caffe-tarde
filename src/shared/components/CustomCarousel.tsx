@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
@@ -6,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/shared/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 type BannerItem = {
   src: string;
@@ -15,40 +17,49 @@ type BannerItem = {
 
 const CustomCarousel = () => {
   const carouselImages: BannerItem[] = [
-    {
-      src: "/images/main_banner_01.png",
-      alt: "신메뉴 출시 라떼 PC 배너 이미지",
-      link: "/menu/new",
-    },
-    {
-      src: "/images/main_banner_02.png",
-      alt: "이달의 이벤트 PC 배너 이미지",
-      link: "/event",
-    },
+    { src: "/images/main_banner_01.png", alt: "라떼 출시", link: "/menu/new" },
+    { src: "/images/main_banner_02.png", alt: "이달의 이벤트", link: "/event" },
     {
       src: "/images/main_banner_03.png",
-      alt: "신메뉴 출시 제주 말차 PC 배너 이미지",
+      alt: "제주 말차 출시",
       link: "/event",
     },
   ];
 
   return (
-    <Carousel className="w-full py-[80px]">
+    <Carousel
+      className="w-full pt-[80px]"
+      plugins={[Autoplay({ delay: 3000 })]}
+    >
       <CarouselContent>
         {carouselImages.map((item, index) => (
-          <CarouselItem key={index}>
-            <Image
-              src={item.src}
-              alt={item.alt}
-              loading="lazy"
-              width={1920}
-              height={580}
-            />
+          <CarouselItem
+            key={index}
+            className="relative cursor-pointer aspect-[1920/580]"
+          >
+            {item.link ? (
+              <Link href={item.link} className="block w-full h-full relative">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  className="object-cover"
+                />
+              </Link>
+            ) : (
+              <Image
+                src={item.src}
+                alt={item.alt}
+                width={1920}
+                height={580}
+                className="object-cover w-full h-full"
+              />
+            )}
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="left-4 !p-8 [&>svg]:!h-8 [&>svg]:!w-8" />
+      <CarouselNext className="right-4 !p-8 [&>svg]:!h-8 [&>svg]:!w-8" />
     </Carousel>
   );
 };

@@ -66,7 +66,7 @@ const MonthlyBestMenu = () => {
 
   return (
     <section className="py-10">
-      <h2>이달의 베스트 메뉴</h2>
+      <h2 className="font-semibold text-2xl">이달의 베스트 메뉴</h2>
       <div className="flex justify-between pt-10">
         {items.map((item, index) => (
           <Card className="w-[250px]" key={index}>

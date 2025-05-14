@@ -12,7 +12,7 @@ const Header = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <header className="bg-white shadow-md w-full z-50 fixed">
+    <header className="bg-white shadow-sm w-full z-50 fixed">
       <div
         className={`relative  overflow-hidden transition-all duration-300 ${
           expanded ? "h-[280px] bg-[#f6f5ef]" : "h-[80px]"
@@ -20,7 +20,9 @@ const Header = () => {
       >
         <div className="flex justify-between items-center px-20 py-4 h-[80px] w-screen max-h-[270px] py-2">
           <div className="text-2xl font-extrabold text-black-500">
-            TARDE COFFEE
+            <h1>
+              <Link href="/"> TARDE COFFEE</Link>
+            </h1>
           </div>
           <nav>
             <ul
