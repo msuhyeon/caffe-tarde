@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex-grow">
       <MainBanner />
-      <div className="container mx-auto px-30 sm:px-10 lg:px-50">
+      <div className="container mx-auto px-20 sm:px-10 lg:px-30">
         <MonthlyBestMenu />
       </div>
       <CallToAction />

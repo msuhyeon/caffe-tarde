@@ -31,35 +31,35 @@ const MonthlyBestMenu = () => {
 
   const items: DrinkTypes[] = [
     {
-      src: "",
+      src: "/images/best_01.png",
       alt: "음료 사진",
-      name: "Dalgona Coffee",
-      desc: "An espresso coffee drink, topped with a small",
+      name: "카페 라떼",
+      desc: "우유 위에 달콤쌉싸름한 휘핑 커피 크림을 얹은 음료",
       price: 4500,
       link: "#",
     },
     {
-      src: "",
-      alt: "음료 사진",
-      name: "Lungo Coffee",
-      desc: "Whipped coffee made using instant coffee",
+      src: "/images/best_02.png",
+      alt: "아인슈페너 커피",
+      name: "아인슈페너",
+      desc: "진한 에스프레소 위에 부드러운 휘핑 크림을 얹은 오스트리아 전통 커피",
       price: 6000,
       link: "#",
     },
     {
-      src: "",
+      src: "/images/best_03.png",
       alt: "음료 사진",
-      name: "Lugo Coffee",
-      desc: "An espresso coffee drink, topped with a small",
-      price: 4000,
+      name: "달고나 커피",
+      desc: "달고나 사탕 같은 달콤함을 살린 커피 크림을 차가운 우유 위에 얹은 음료",
+      price: 5500,
       link: "#",
     },
     {
-      src: "",
+      src: "/images/best_04.png",
       alt: "음료 사진",
-      name: "Lugo Coffee",
-      desc: "Whipped coffee made using instant coffee",
-      price: 5500,
+      name: "아이스 아메리카노",
+      desc: "시원한 에스프레소를 얼음과 함께 깔끔하게 즐기는 커피",
+      price: 4000,
       link: "#",
     },
   ];
@@ -69,8 +69,8 @@ const MonthlyBestMenu = () => {
       <h2 className="font-semibold text-2xl">이달의 베스트 메뉴</h2>
       <div className="flex justify-between pt-10">
         {items.map((item, index) => (
-          <Card className="w-[250px]" key={index}>
-            <div className="relative h-60 w-full">
+          <Card className="w-[250px] p-0 overflow-hidden" key={index}>
+            <div className="relative h-50 w-full">
               <Image
                 src={item.src}
                 alt={item.alt}
@@ -84,7 +84,7 @@ const MonthlyBestMenu = () => {
               </CardTitle>
               <CardDescription className="">{item.desc}</CardDescription>
             </CardHeader>
-            <CardContent className="flex justify-between items-end">
+            <CardContent className="flex justify-between items-center">
               <p>{`${formatPrice(item.price)}원`}</p>
               <Button variant="outline">자세히 보기</Button>
             </CardContent>
