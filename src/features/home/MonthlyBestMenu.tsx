@@ -1,11 +1,23 @@
-// import Image from "next/image";
+import Image from "next/image";
+import { Button } from "@/shared/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/shared/components/ui/card";
+import { formatPrice } from "@/lib/format";
 
-// type CardItem = {
-//   src: string;
-//   alt: string;
-//   link?: string;
-//   desc: string;
-// };
+type DrinkTypes = {
+  src: string;
+  name: string;
+  desc: string;
+  alt: string;
+  price: number;
+  link?: string;
+};
 
 const MonthlyBestMenu = () => {
   // const itemImages: CardItem[] = [
@@ -17,41 +29,68 @@ const MonthlyBestMenu = () => {
   //   },
   // ];
 
-  const items: string[] = [
-    "딸기 라떼",
-    "말차 라떼",
-    "망고 쉐이크",
-    "아이스 아메리카노",
-    "아인슈페너",
-    "달고나 라떼",
+  const items: DrinkTypes[] = [
+    {
+      src: "",
+      alt: "음료 사진",
+      name: "Dalgona Coffee",
+      desc: "An espresso coffee drink, topped with a small",
+      price: 4500,
+      link: "#",
+    },
+    {
+      src: "",
+      alt: "음료 사진",
+      name: "Lungo Coffee",
+      desc: "Whipped coffee made using instant coffee",
+      price: 6000,
+      link: "#",
+    },
+    {
+      src: "",
+      alt: "음료 사진",
+      name: "Lugo Coffee",
+      desc: "An espresso coffee drink, topped with a small",
+      price: 4000,
+      link: "#",
+    },
+    {
+      src: "",
+      alt: "음료 사진",
+      name: "Lugo Coffee",
+      desc: "Whipped coffee made using instant coffee",
+      price: 5500,
+      link: "#",
+    },
   ];
 
   return (
-    <section>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4 py-8 justify-items-center">
-        {/* {itemImages.map((item, index) => (
-        <li
-          className="relative group overflow-hidden rounded-lg shadow-lg"
-          key={index}
-        >
-          <Image src={item.src} alt={item.alt} className="w-full h-auto" />
-          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <p className="text-white text-center px-4">{item.desc}</p>
-          </div>
-        </li>
-      ))} */}
+    <section className="py-10">
+      <h2>이달의 베스트 메뉴</h2>
+      <div className="flex justify-between pt-10">
         {items.map((item, index) => (
-          <li
-            className="relative group overflow-hidden rounded-lg shadow-lg w-[130px] h-[200px] p-6"
-            key={index}
-          >
-            <div className="">{item}</div>
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              {/* <p className="text-white text-center px-4">{item.desc}</p> */}
+          <Card className="w-[250px]" key={index}>
+            <div className="relative h-60 w-full">
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                className="object-cover"
+              />
             </div>
-          </li>
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold">
+                {item.name}
+              </CardTitle>
+              <CardDescription className="">{item.desc}</CardDescription>
+            </CardHeader>
+            <CardContent className="flex justify-between items-end">
+              <p>{`${formatPrice(item.price)}원`}</p>
+              <Button variant="outline">자세히 보기</Button>
+            </CardContent>
+          </Card>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };
