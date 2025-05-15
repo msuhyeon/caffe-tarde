@@ -1,13 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/shared/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+} from '@/shared/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 type BannerItem = {
   src: string;
@@ -17,20 +17,17 @@ type BannerItem = {
 
 const CustomCarousel = () => {
   const carouselImages: BannerItem[] = [
-    { src: "/images/main_banner_01.png", alt: "라떼 출시", link: "/menu/new" },
-    { src: "/images/main_banner_02.png", alt: "이달의 이벤트", link: "/event" },
+    { src: '/images/main_banner_01.png', alt: '라떼 출시', link: '/menu/new' },
+    { src: '/images/main_banner_02.png', alt: '이달의 이벤트', link: '/event' },
     {
-      src: "/images/main_banner_03.png",
-      alt: "제주 말차 출시",
-      link: "/event",
+      src: '/images/main_banner_03.png',
+      alt: '제주 말차 출시',
+      link: '/event',
     },
   ];
 
   return (
-    <Carousel
-      className="w-full pt-[80px]"
-      plugins={[Autoplay({ delay: 4000 })]}
-    >
+    <Carousel className="w-full" plugins={[Autoplay({ delay: 4000 })]}>
       <CarouselContent>
         {carouselImages.map((item, index) => (
           <CarouselItem
