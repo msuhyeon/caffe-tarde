@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const CallToAction = () => {
   return (
@@ -8,6 +8,7 @@ const CallToAction = () => {
         alt="cta 배너"
         width="1920"
         height="300"
+        className="w-full"
       />
     </section>
   );
