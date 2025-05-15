@@ -1,0 +1,42 @@
+[
+  {
+    "id": "9200000004548",
+    "src": "/images/dessert_cheesecake.png",
+    "alt": "치즈 케이크 사진",
+    "name": "치즈 케이크",
+    "desc": "리치한 크림치즈와 바삭한 크러스트가 어우러진 디저트",
+    "price": 5500
+  },
+  {
+    "id": "9200000004549",
+    "src": "/images/dessert_matcha_icecream.png",
+    "alt": "말차 아이스크림 사진",
+    "name": "말차 아이스크림",
+    "desc": "고급 말차의 은은한 쌉싸름함이 느껴지는 아이스크림",
+    "price": 5000
+  },
+  {
+    "id": "9200000004550",
+    "src": "/images/dessert_tiramisu.png",
+    "alt": "티라미수 사진",
+    "name": "티라미수",
+    "desc": "부드러운 마스카포네 크림에 에스프레소 시럽을 적신 클래식 디저트",
+    "price": 6000
+  },
+  {
+    "id": "9200000004551",
+    "src": "/images/dessert_chocolate_mousse.png",
+    "alt": "초콜릿 무스 사진",
+    "name": "초콜릿 무스",
+    "desc": "진한 다크 초콜릿과 가벼운 크림이 조화를 이루는 풍미 가득한 무스",
+    "price": 6500
+  },
+  {
+    "id": "9200000004552",
+    "src": "/images/dessert_berry_parfait.png",
+    "alt": "베리 파르페 사진",
+    "name": "베리 파르페",
+    "desc": "산딸기·블루베리·크랜베리가 층층이 쌓인 상큼달콤 파르페",
+    "price": 7000
+  }
+]
