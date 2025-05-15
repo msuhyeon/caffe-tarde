@@ -1,0 +1,86 @@
+import Image from 'next/image';
+
+type Nutrition = {
+  calories: number;
+  fat: number;
+  protein: number;
+  sodium: number;
+  sugar: number;
+  caffeine: number;
+};
+
+type DrinkDetailProps = {
+  name: string;
+  englishName: string;
+  description: string;
+  volume: string;
+  imageSrc: string;
+  imageAlt: string;
+  nutrition: Nutrition;
+  allergens: string[];
+};
+
+const DrinkDetail = ({
+  name,
+  englishName,
+  description,
+  volume,
+  imageSrc,
+  imageAlt,
+  nutrition,
+  allergens,
+}: DrinkDetailProps) => {
+  return (
+    <section className="flex justify-between py-10 md:flex-row gap-10">
+      {/* <section className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-10"> */}
+      <div className="md:w-1/3 flex justify-center items-start ">
+        <Image src={imageSrc} alt={imageAlt} width="350" height="350" />
+        {/* <img src={imageSrc} alt={imageAlt} className="w-full max-w-xs" /> */}
+      </div>
+      <div className="md:w-1/2">
+        <div className="text-sm text-neutral-500 mb-2">음료</div>
+        <h1 className="text-2xl font-bold">{name}</h1>
+        <p className="text-sm text-neutral-500 mb-4">{englishName}</p>
+        <p className="text-base mb-6">{description}</p>
+        <hr className="border-neutral-300 my-6" />
+        <div className="flex justify-between items-center mb-2">
+          <h2 className="font-semibold text-lg">제품 영양 정보</h2>
+          <span className="text-sm text-neutral-500">
+            Small Size / {volume}
+          </span>
+        </div>
+        <ul className="grid grid-cols-2 gap-y-2 gap-x-10 text-sm text-neutral-700 mb-6">
+          <li className="flex justify-between">
+            <span>1회 제공량 (kcal)</span>
+            <span>{nutrition.calories}</span>
+          </li>
+          <li className="flex justify-between">
+            <span>포화지방 (g)</span>
+            <span>{nutrition.fat}</span>
+          </li>
+          <li className="flex justify-between">
+            <span>단백질 (g)</span>
+            <span>{nutrition.protein}</span>
+          </li>
+          <li className="flex justify-between">
+            <span>나트륨 (mg)</span>
+            <span>{nutrition.sodium}</span>
+          </li>
+          <li className="flex justify-between">
+            <span>당류 (g)</span>
+            <span>{nutrition.sugar}</span>
+          </li>
+          <li className="flex justify-between">
+            <span>카페인 (mg)</span>
+            <span>{nutrition.caffeine}</span>
+          </li>
+        </ul>
+        <div className="bg-neutral-100 text-sm text-neutral-800 px-4 py-3 mb-6 rounded">
+          알레르기 유발요인: {allergens.join(', ')}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default DrinkDetail;
