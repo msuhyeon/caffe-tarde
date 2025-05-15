@@ -29,7 +29,7 @@ const CustomCarousel = () => {
   return (
     <Carousel
       className="w-full pt-[80px]"
-      plugins={[Autoplay({ delay: 3000 })]}
+      plugins={[Autoplay({ delay: 4000 })]}
     >
       <CarouselContent>
         {carouselImages.map((item, index) => (
