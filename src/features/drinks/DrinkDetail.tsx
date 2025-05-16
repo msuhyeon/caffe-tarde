@@ -1,26 +1,8 @@
 import Image from 'next/image';
-
-type Nutrition = {
-  calories: number;
-  fat: number;
-  protein: number;
-  sodium: number;
-  sugar: number;
-  caffeine: number;
-};
-
-type DrinkDetailProps = {
-  name: string;
-  englishName: string;
-  description: string;
-  volume: string;
-  imageSrc: string;
-  imageAlt: string;
-  nutrition: Nutrition;
-  allergens: string[];
-};
+import { DrinkDetailTypes } from '@/features/drinks/types';
 
 const DrinkDetail = ({
+  id,
   name,
   englishName,
   description,
@@ -29,7 +11,7 @@ const DrinkDetail = ({
   imageAlt,
   nutrition,
   allergens,
-}: DrinkDetailProps) => {
+}: DrinkDetailTypes) => {
   return (
     <section className="flex justify-between py-10 md:flex-row gap-10">
       <div className="md:w-1/3 flex justify-center items-start ">

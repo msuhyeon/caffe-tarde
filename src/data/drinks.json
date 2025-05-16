@@ -1,11 +1,11 @@
 [
   {
-    "id": "9200000004544",
+    "id": "10011",
     "name": "카페 라떼",
     "englishName": "Caffe Latte",
     "description": "우유 위에 달콤쌉싸름한 휘핑 커피 크림을 얹은 음료",
     "volume": "355ml",
-    "imageSrc": "/images/best_01.png",
+    "imageSrc": "/images/latte.png",
     "imageAlt": "카페 라떼 사진",
     "nutrition": {
       "calories": 190,
@@ -18,12 +18,12 @@
     "allergens": ["우유"]
   },
   {
-    "id": "9200000004545",
+    "id": "10012",
     "name": "아인슈페너",
     "englishName": "Einspänner",
     "description": "진한 에스프레소 위에 부드러운 휘핑 크림을 얹은 오스트리아 전통 커피",
     "volume": "355ml",
-    "imageSrc": "/images/best_02.png",
+    "imageSrc": "/images/einspanner.png",
     "imageAlt": "아인슈페너 사진",
     "nutrition": {
       "calories": 150,
@@ -36,12 +36,12 @@
     "allergens": ["우유"]
   },
   {
-    "id": "9200000004546",
+    "id": "10013",
     "name": "달고나 커피",
     "englishName": "Dalgona Coffee",
     "description": "달고나 사탕 같은 달콤함을 살린 커피 크림을 차가운 우유 위에 얹은 음료",
     "volume": "355ml",
-    "imageSrc": "/images/best_03.png",
+    "imageSrc": "/images/dalgona_latte.png",
     "imageAlt": "달고나 커피 사진",
     "nutrition": {
       "calories": 230,
@@ -54,12 +54,12 @@
     "allergens": ["우유"]
   },
   {
-    "id": "9200000004547",
+    "id": "10014",
     "name": "아이스 아메리카노",
     "englishName": "Iced Americano",
     "description": "시원한 에스프레소를 얼음과 함께 깔끔하게 즐기는 커피",
     "volume": "355ml",
-    "imageSrc": "/images/best_04.png",
+    "imageSrc": "/images/americano.png",
     "imageAlt": "아이스 아메리카노 사진",
     "nutrition": {
       "calories": 15,
@@ -72,12 +72,12 @@
     "allergens": []
   },
   {
-    "id": "9200000004548",
+    "id": "10015",
     "name": "콜드 브루",
     "englishName": "Cold Brew",
     "description": "깊고 부드러운 풍미의 콜드 브루 커피",
     "volume": "355ml",
-    "imageSrc": "/images/best_04.png",
+    "imageSrc": "/images/cold_brew.png",
     "imageAlt": "콜드브루 사진",
     "nutrition": {
       "calories": 5,
@@ -90,12 +90,12 @@
     "allergens": []
   },
   {
-    "id": "9200000004549",
+    "id": "10016",
     "name": "말차라떼",
     "englishName": "Matcha Latte",
     "description": "고급 말차의 은은한 쌉싸름함이 느껴지는 라떼",
     "volume": "355ml",
-    "imageSrc": "/images/best_04.png",
+    "imageSrc": "/images/matcha_latte.png",
     "imageAlt": "말차라떼 사진",
     "nutrition": {
       "calories": 130,
@@ -108,12 +108,12 @@
     "allergens": ["우유"]
   },
   {
-    "id": "9200000004550",
+    "id": "10017",
     "name": "밀크티라떼",
     "englishName": "Milk Tea Latte",
     "description": "홍차의 풍미와 부드러운 우유가 어우러진 달콤한 라떼",
     "volume": "355ml",
-    "imageSrc": "/images/best_04.png",
+    "imageSrc": "/images/milktea.png",
     "imageAlt": "밀크티라떼 사진",
     "nutrition": {
       "calories": 170,

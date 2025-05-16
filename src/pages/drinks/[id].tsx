@@ -2,28 +2,9 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import drinks from '@/data/drinks.json';
 import DrinkDetail from '@/features/drinks/DrinkDetail';
+import { DrinkDetailTypes } from '@/features/drinks/types';
 
-type Nutrition = {
-  calories: number;
-  fat: number;
-  protein: number;
-  sodium: number;
-  sugar: number;
-  caffeine: number;
-};
-
-interface Drink {
-  name: string;
-  englishName: string;
-  description: string;
-  volume: string;
-  imageSrc: string;
-  imageAlt: string;
-  nutrition: Nutrition;
-  allergens: string[];
-}
-
-export default function DrinkPage({ drink }: { drink: Drink }) {
+export default function DrinkPage({ drink }: { drink: DrinkDetailTypes }) {
   const { isFallback } = useRouter();
   if (isFallback) return <p>페이지 로딩 중</p>;
   return <DrinkDetail {...drink} />;
