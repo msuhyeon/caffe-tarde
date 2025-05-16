@@ -32,10 +32,8 @@ const DrinkDetail = ({
 }: DrinkDetailProps) => {
   return (
     <section className="flex justify-between py-10 md:flex-row gap-10">
-      {/* <section className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-10"> */}
       <div className="md:w-1/3 flex justify-center items-start ">
         <Image src={imageSrc} alt={imageAlt} width="350" height="350" />
-        {/* <img src={imageSrc} alt={imageAlt} className="w-full max-w-xs" /> */}
       </div>
       <div className="md:w-1/2">
         <div className="text-sm text-neutral-500 mb-2">음료</div>
