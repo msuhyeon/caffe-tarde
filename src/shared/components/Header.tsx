@@ -6,7 +6,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from '@/shared/components/ui/dropdown-menu';
-import menuData from '@/data/menu.json';
+import category from '@/data/category.json';
 
 const Header = () => {
   const [expanded, setExpanded] = useState(false);
@@ -30,7 +30,7 @@ const Header = () => {
               onMouseEnter={() => setExpanded(true)}
               onMouseLeave={() => setExpanded(false)}
             >
-              {menuData.map((menu, index) => (
+              {category.map((menu, index) => (
                 <li key={index} className="cursor-pointer relative flex gap-10">
                   <span className="hover:font-medium">{menu.label}</span>
                   <ul className="absolute left-0 top-full w-full z-40 pt-7 ">
