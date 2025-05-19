@@ -9,7 +9,7 @@ import {
 } from '@/shared/components/ui/breadcrumb';
 import Detail from '@/shared/components/Detail';
 
-const Detail = (desert: DetailTypes) => {
+const DesertDetail = (desert: DetailTypes) => {
   return (
     <section className="mt-10">
       <Breadcrumb>

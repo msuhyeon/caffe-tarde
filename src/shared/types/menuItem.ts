@@ -9,6 +9,7 @@ type Nutrition = {
 
 export type DetailTypes = {
   id: string;
+  category: string;
   name: string;
   englishName: string;
   description: string;
