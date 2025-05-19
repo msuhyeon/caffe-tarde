@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-import drinks from '@/data/drinks.json';
-import DrinkDetail from '@/features/drinks/DrinkDetail';
-import { DrinkDetailTypes } from '@/features/drinks/types';
+import menu from '@/data/menu.json';
+import DrinkDetail from '@/features/menu/drinks/Detail';
+import { DetailTypes } from '@/shared/types/menuItem';
 
-export default function DrinkPage({ drink }: { drink: DrinkDetailTypes }) {
+export default function DrinkPage({ drink }: { drink: DetailTypes }) {
   const { isFallback } = useRouter();
   if (isFallback) return <p>페이지 로딩 중</p>;
   return <DrinkDetail {...drink} />;
@@ -24,6 +24,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // const repo = await res.json()
   // return { props: {repo}}
   const code = params!.id as string;
+  const drinks = menu.filter(item => item.category === 'drinks');
   const drink = drinks.find(d => d.id === code) || null;
 
   if (!drink) {

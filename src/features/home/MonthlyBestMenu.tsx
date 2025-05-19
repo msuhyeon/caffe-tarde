@@ -9,11 +9,11 @@ import {
   CardTitle,
 } from '@/shared/components/ui/card';
 // import { formatPrice } from '@/lib/format';
-import drinks from '@/data/drinks.json';
-import { DrinkDetailTypes } from '@/features/drinks/types';
+import menu from '@/data/menu.json';
+import { DetailTypes } from '@/shared/types/menuItem';
 
 const MonthlyBestMenu = () => {
-  const items: DrinkDetailTypes[] = drinks.slice(0, 4);
+  const items: DetailTypes[] = menu.slice(0, 4);
 
   return (
     <section className="py-10">
@@ -33,13 +33,13 @@ const MonthlyBestMenu = () => {
               <CardTitle className="text-xl font-semibold">
                 {item.name}
               </CardTitle>
-              <CardDescription className="">{item.description}</CardDescription>
+              <CardDescription>{item.description}</CardDescription>
             </CardHeader>
             <CardContent className="flex justify-between items-center">
               {/* <p>{`${formatPrice(item.price)}원`}</p> */}
               <Link
                 className="cursor-pointer py-2 px-4 rounded-sm border-1 text-sm"
-                href={`/drinks/${item.id}`}
+                href={`/menu/drinks/${item.id}`}
               >
                 자세히 보기
               </Link>

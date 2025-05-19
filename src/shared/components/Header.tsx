@@ -15,11 +15,11 @@ const Header = () => {
     <header className="bg-white shadow-sm w-full z-50 fixed">
       <div
         className={`relative  overflow-hidden transition-all duration-300 ${
-          expanded ? 'h-[280px] bg-[#f6f5ef]' : 'h-[80px]'
+          expanded ? 'h-[280px]' : 'h-[80px]'
         }`}
       >
         <div className="flex justify-between items-center px-20 py-4 h-[80px] w-screen max-h-[270px] py-2">
-          <div className="text-2xl font-extrabold text-black-500">
+          <div className="text-2xl font-extrabold expanded text-black-500">
             <h1>
               <Link href="/"> TARDE COFFEE</Link>
             </h1>
@@ -31,7 +31,10 @@ const Header = () => {
               onMouseLeave={() => setExpanded(false)}
             >
               {category.map((menu, index) => (
-                <li key={index} className="cursor-pointer relative flex gap-10">
+                <li
+                  key={index}
+                  className={`cursor-pointer relative flex gap-10 ${expanded && 'text-[#505e54]'}`}
+                >
                   <span className="hover:font-medium">{menu.label}</span>
                   <ul className="absolute left-0 top-full w-full z-40 pt-7 ">
                     {menu.subItems.map((sub, subIndex) => (
