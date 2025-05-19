@@ -7,12 +7,12 @@ type Nutrition = {
   caffeine: number;
 };
 
-export type DrinkDetailTypes = {
+export type DetailTypes = {
   id: string;
   name: string;
   englishName: string;
   description: string;
-  volume: string;
+  volume?: string;
   imageSrc: string;
   imageAlt: string;
   nutrition: Nutrition;
