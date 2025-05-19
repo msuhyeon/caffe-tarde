@@ -1,0 +1,225 @@
+[
+  {
+    "id": "10011",
+    "category": "drinks",
+    "name": "카페 라떼",
+    "englishName": "Caffe Latte",
+    "description": "우유 위에 달콤쌉싸름한 휘핑 커피 크림을 얹은 음료",
+    "volume": "355ml",
+    "imageSrc": "/images/latte.png",
+    "imageAlt": "카페 라떼 사진",
+    "nutrition": {
+      "calories": 190,
+      "fat": 4,
+      "protein": 6,
+      "sodium": 120,
+      "sugar": 13,
+      "caffeine": 75
+    },
+    "allergens": ["우유"]
+  },
+  {
+    "id": "10012",
+    "category": "drinks",
+    "name": "아인슈페너",
+    "englishName": "Einspänner",
+    "description": "진한 에스프레소 위에 부드러운 휘핑 크림을 얹은 오스트리아 전통 커피",
+    "volume": "355ml",
+    "imageSrc": "/images/einspanner.png",
+    "imageAlt": "아인슈페너 사진",
+    "nutrition": {
+      "calories": 150,
+      "fat": 3,
+      "protein": 2,
+      "sodium": 70,
+      "sugar": 10,
+      "caffeine": 80
+    },
+    "allergens": ["우유"]
+  },
+  {
+    "id": "10013",
+    "category": "deserts",
+    "name": "스콘",
+    "englishName": "Scone",
+    "description": "겉은 바삭하고 속은 촉촉한, 담백한 풍미의 클래식한 영국식 스콘",
+    "imageSrc": "/images/scone.png",
+    "imageAlt": "스콘 사진",
+    "nutrition": {
+      "calories": 310,
+      "fat": 15,
+      "protein": 5,
+      "sodium": 320,
+      "sugar": 10,
+      "caffeine": 0
+    },
+    "allergens": ["우유", "밀", "달걀"]
+  },
+  {
+    "id": "10014",
+    "category": "drinks",
+    "name": "아이스 아메리카노",
+    "englishName": "Iced Americano",
+    "description": "시원한 에스프레소를 얼음과 함께 깔끔하게 즐기는 커피",
+    "volume": "355ml",
+    "imageSrc": "/images/americano.png",
+    "imageAlt": "아이스 아메리카노 사진",
+    "nutrition": {
+      "calories": 15,
+      "fat": 0,
+      "protein": 0,
+      "sodium": 5,
+      "sugar": 0,
+      "caffeine": 150
+    },
+    "allergens": []
+  },
+  {
+    "id": "10015",
+    "category": "deserts",
+    "name": "베리 파르페",
+    "englishName": "Berry Parfait",
+    "description": "산딸기·블루베리·크랜베리가 층층이 쌓인 상큼달콤 파르페",
+    "imageSrc": "/images/berry_parfait.png",
+    "imageAlt": "베리 파르페 사진",
+    "nutrition": {
+      "calories": 280,
+      "fat": 8,
+      "protein": 3,
+      "sodium": 65,
+      "sugar": 26,
+      "caffeine": 0
+    },
+    "allergens": ["우유"]
+  },
+  {
+    "id": "10016",
+    "category": "drinks",
+    "name": "말차라떼",
+    "englishName": "Matcha Latte",
+    "description": "고급 말차의 은은한 쌉싸름함이 느껴지는 라떼",
+    "volume": "355ml",
+    "imageSrc": "/images/matcha_latte.png",
+    "imageAlt": "말차라떼 사진",
+    "nutrition": {
+      "calories": 130,
+      "fat": 2,
+      "protein": 4,
+      "sodium": 100,
+      "sugar": 11,
+      "caffeine": 35
+    },
+    "allergens": ["우유"]
+  },
+  {
+    "id": "10017",
+    "category": "drinks",
+    "name": "밀크티라떼",
+    "englishName": "Milk Tea Latte",
+    "description": "홍차의 풍미와 부드러운 우유가 어우러진 달콤한 라떼",
+    "volume": "355ml",
+    "imageSrc": "/images/milktea.png",
+    "imageAlt": "밀크티라떼 사진",
+    "nutrition": {
+      "calories": 170,
+      "fat": 3,
+      "protein": 3,
+      "sodium": 90,
+      "sugar": 17,
+      "caffeine": 40
+    },
+    "allergens": ["우유"]
+  },
+  {
+    "id": "10018",
+    "category": "deserts",
+    "name": "치즈 케이크",
+    "englishName": "Cheesecake",
+    "description": "리치한 크림치즈와 바삭한 크러스트가 어우러진 디저트",
+    "imageSrc": "/images/cheese_cake.png",
+    "imageAlt": "치즈 케이크 사진",
+    "nutrition": {
+      "calories": 350,
+      "fat": 22,
+      "protein": 6,
+      "sodium": 180,
+      "sugar": 18,
+      "caffeine": 0
+    },
+    "allergens": ["우유", "밀", "달걀"]
+  },
+  {
+    "id": "10019",
+    "category": "deserts",
+    "name": "말차 아이스크림",
+    "englishName": "Matcha Ice Cream",
+    "description": "고급 말차의 은은한 쌉싸름함이 느껴지는 아이스크림",
+    "imageSrc": "/images/greentea_icecream.png",
+    "imageAlt": "말차 아이스크림 사진",
+    "nutrition": {
+      "calories": 220,
+      "fat": 12,
+      "protein": 3,
+      "sodium": 45,
+      "sugar": 16,
+      "caffeine": 25
+    },
+    "allergens": ["우유"]
+  },
+  {
+    "id": "10020",
+    "category": "drinks",
+    "name": "달고나 커피",
+    "englishName": "Dalgona Coffee",
+    "description": "달고나 사탕 같은 달콤함을 살린 커피 크림을 차가운 우유 위에 얹은 음료",
+    "volume": "355ml",
+    "imageSrc": "/images/dalgona_latte.png",
+    "imageAlt": "달고나 커피 사진",
+    "nutrition": {
+      "calories": 230,
+      "fat": 5,
+      "protein": 3,
+      "sodium": 90,
+      "sugar": 18,
+      "caffeine": 80
+    },
+    "allergens": ["우유"]
+  },
+  {
+    "id": "10021",
+    "category": "deserts",
+    "name": "초콜릿 무스",
+    "englishName": "Chocolate Mousse",
+    "description": "진한 다크 초콜릿과 가벼운 크림이 조화를 이루는 풍미 가득한 무스",
+    "imageSrc": "/images/choco_mousse.png",
+    "imageAlt": "초콜릿 무스 사진",
+    "nutrition": {
+      "calories": 400,
+      "fat": 28,
+      "protein": 4,
+      "sodium": 90,
+      "sugar": 24,
+      "caffeine": 12
+    },
+    "allergens": ["우유", "달걀"]
+  },
+  {
+    "id": "10022",
+    "category": "drinks",
+    "name": "콜드 브루",
+    "englishName": "Cold Brew",
+    "description": "깊고 부드러운 풍미의 콜드 브루 커피",
+    "volume": "355ml",
+    "imageSrc": "/images/cold_brew.png",
+    "imageAlt": "콜드브루 사진",
+    "nutrition": {
+      "calories": 5,
+      "fat": 0,
+      "protein": 0,
+      "sodium": 5,
+      "sugar": 0,
+      "caffeine": 200
+    },
+    "allergens": []
+  }
+]
