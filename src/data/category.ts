@@ -10,6 +10,7 @@ export const category: CategoryType[] = [
   },
   {
     label: '메뉴',
+    linkUrl: '/menu',
     subItems: [
       { label: '음료', linkUrl: '/menu/drinks' },
       { label: '디저트', linkUrl: '/menu/deserts' },

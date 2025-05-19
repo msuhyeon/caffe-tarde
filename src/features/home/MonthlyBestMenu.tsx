@@ -26,7 +26,9 @@ const MonthlyBestMenu = () => {
                 src={item.imageSrc}
                 alt={item.imageAlt}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover"
+                priority
               />
             </div>
             <CardHeader>
@@ -39,7 +41,7 @@ const MonthlyBestMenu = () => {
               {/* <p>{`${formatPrice(item.price)}원`}</p> */}
               <Link
                 className="cursor-pointer py-2 px-4 rounded-sm border-1 text-sm"
-                href={`/menu/drinks/${item.id}`}
+                href={`/menu/${item.category === 'drinks' ? 'drinks' : 'deserts'}/${item.id}`}
               >
                 자세히 보기
               </Link>

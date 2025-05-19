@@ -5,5 +5,6 @@ type subCategoryType = {
 
 export type CategoryType = {
   label: string;
+  linkUrl?: string;
   subItems: subCategoryType[];
 };

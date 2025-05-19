@@ -15,7 +15,13 @@ const Detail = ({
   return (
     <div className="flex justify-between md:flex-row gap-10 mt-6">
       <div className="md:w-2/5 flex justify-center items-start ">
-        <Image src={imageSrc} alt={imageAlt} width="530" height="530" />
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          width="530"
+          height="530"
+          priority
+        />
       </div>
       {nutrition && (
         <>

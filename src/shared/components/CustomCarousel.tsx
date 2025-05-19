@@ -41,6 +41,7 @@ const CustomCarousel = () => {
                   alt={item.alt}
                   fill
                   className="object-cover"
+                  priority
                 />
               </Link>
             ) : (
@@ -50,6 +51,7 @@ const CustomCarousel = () => {
                 width={1920}
                 height={580}
                 className="object-cover w-full h-full"
+                priority
               />
             )}
           </CarouselItem>

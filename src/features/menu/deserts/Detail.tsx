@@ -13,7 +13,7 @@ const DesertDetail = (desert: DetailTypes) => {
   return (
     <section className="mt-10">
       <Breadcrumb>
-        <BreadcrumbList>
+        <BreadcrumbList className="justify-end">
           <BreadcrumbItem>
             <BreadcrumbLink href="/">Home</BreadcrumbLink>
           </BreadcrumbItem>
