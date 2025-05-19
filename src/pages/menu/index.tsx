@@ -9,16 +9,13 @@ import { menu } from '@/data/menu';
 import MenuGrid from '@/shared/components/MenuGrid';
 import { DetailTypes } from '@/shared/types/menuItem';
 
-const Desert = () => {
-  const filteredMenu: DetailTypes[] = menu.filter(
-    item => item.category === 'deserts',
-  );
-  const sortedMenu: DetailTypes[] = filteredMenu.sort(function compare(a, b) {
+const Menu = () => {
+  const sortedMenu: DetailTypes[] = menu.sort(function compare(a, b) {
     return parseInt(a.id) - parseInt(b.id);
   });
 
   return (
-    <section className="mt-10">
+    <section className="mt-10 ">
       <Breadcrumb>
         <BreadcrumbList className="justify-end">
           <BreadcrumbItem>
@@ -35,4 +32,4 @@ const Desert = () => {
   );
 };
 
-export default Desert;
+export default Menu;

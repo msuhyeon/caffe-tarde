@@ -6,7 +6,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from '@/shared/components/ui/dropdown-menu';
-import category from '@/data/category.json';
+import { category } from '@/data/category';
 
 const Header = () => {
   const [expanded, setExpanded] = useState(false);

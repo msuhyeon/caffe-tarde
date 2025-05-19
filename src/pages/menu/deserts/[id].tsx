@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-import menu from '@/data/menu.json';
+import { menu } from '@/data/menu';
 import DesertDetail from '@/features/menu/deserts/Detail';
 import { DetailTypes } from '@/shared/types/menuItem';
 

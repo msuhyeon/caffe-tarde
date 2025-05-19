@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from '@/shared/components/ui/card';
 // import { formatPrice } from '@/lib/format';
-import menu from '@/data/menu.json';
+import { menu } from '@/data/menu';
 import { DetailTypes } from '@/shared/types/menuItem';
 
 const MonthlyBestMenu = () => {

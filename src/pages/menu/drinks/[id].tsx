@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-import menu from '@/data/menu.json';
+import { menu } from '@/data/menu';
 import DrinkDetail from '@/features/menu/drinks/Detail';
 import { DetailTypes } from '@/shared/types/menuItem';
 
@@ -24,6 +24,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // const repo = await res.json()
   // return { props: {repo}}
   const code = params!.id as string;
+
+  console.log('code-', code);
+
   const drinks = menu.filter(item => item.category === 'drinks');
   const drink = drinks.find(d => d.id === code) || null;
 
