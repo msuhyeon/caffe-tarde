@@ -66,7 +66,6 @@ const Detail = ({
               </li>
             </ul>
             <p className="bg-neutral-200 text-sm text-neutral-800  px-4 py-3 mb-6 rounded">
-              {/* <p className="text-sm py-3 mb-6  text-rose-700"> */}
               알레르기 주의 성분 안내:{allergens.join(', ')}
             </p>
           </div>

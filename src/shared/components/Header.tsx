@@ -35,7 +35,13 @@ const Header = () => {
                   key={index}
                   className={`cursor-pointer relative flex gap-10 ${expanded && 'text-[#505e54]'}`}
                 >
-                  <span className="hover:font-medium">{menu.label}</span>
+                  {menu?.linkUrl ? (
+                    <Link href={menu?.linkUrl}>
+                      <span className="hover:font-medium">{menu.label}</span>
+                    </Link>
+                  ) : (
+                    <span className="hover:font-medium">{menu.label}</span>
+                  )}
                   <ul className="absolute left-0 top-full w-full z-40 pt-7 ">
                     {menu.subItems.map((sub, subIndex) => (
                       <li key={subIndex} className="pt-5 hover:text-rose-700">

@@ -18,10 +18,8 @@ export const category: CategoryType[] = [
   },
   {
     label: '멤버십',
-    subItems: [
-      { label: '멤버십안내', linkUrl: '/membership/intro' },
-      { label: '서비스안내', linkUrl: '/membership/serviceInfo' },
-    ],
+    linkUrl: '/membership',
+    subItems: [],
   },
   {
     label: '브랜드 소식',

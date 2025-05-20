@@ -36,4 +36,4 @@ const DesertDetail = (desert: DetailTypes) => {
   );
 };
 
-export default Detail;
+export default DesertDetail;

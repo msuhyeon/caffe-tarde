@@ -4,6 +4,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
+  BreadcrumbPage,
 } from '@/shared/components/ui/breadcrumb';
 import { menu } from '@/data/menu';
 import MenuGrid from '@/shared/components/MenuGrid';
@@ -15,7 +16,7 @@ const Menu = () => {
   });
 
   return (
-    <section className="mt-10 ">
+    <section className="mt-10">
       <Breadcrumb>
         <BreadcrumbList className="justify-end">
           <BreadcrumbItem>
@@ -23,7 +24,7 @@ const Menu = () => {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink href="/menu">메뉴</BreadcrumbLink>
+            <BreadcrumbPage>메뉴</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
