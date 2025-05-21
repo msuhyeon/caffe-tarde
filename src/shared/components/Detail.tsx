@@ -13,7 +13,7 @@ const Detail = ({
   allergens,
 }: DetailTypes) => {
   return (
-    <div className="flex justify-between md:flex-row gap-10 mt-6">
+    <div className="flex justify-between md:flex-row gap-10">
       <div className="md:w-2/5 flex justify-center items-start ">
         <Image
           src={imageSrc}
