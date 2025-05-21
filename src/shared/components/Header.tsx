@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -7,9 +8,11 @@ import {
   DropdownMenuItem,
 } from '@/shared/components/ui/dropdown-menu';
 import { category } from '@/data/category';
+import clsx from 'clsx';
 
 const Header = () => {
   const [expanded, setExpanded] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="bg-white shadow-sm w-full z-50 fixed">
@@ -21,7 +24,7 @@ const Header = () => {
         <div className="flex justify-between items-center px-20 py-4 h-[80px] w-screen max-h-[270px] py-2">
           <div className="text-2xl font-extrabold expanded text-black-500">
             <h1>
-              <Link href="/"> TARDE COFFEE</Link>
+              <Link href="/">TARDE COFFEE</Link>
             </h1>
           </div>
           <nav>

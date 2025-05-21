@@ -23,10 +23,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // const res = await fetch("https://api.github.com/repos/vercel/next.js")
   // const repo = await res.json()
   // return { props: {repo}}
-  const code = params!.id as string;
-
-  console.log('code-', code);
-
+  const code = params!.id as string; // string타입으로 간주해라
   const drinks = menu.filter(item => item.category === 'drinks');
   const drink = drinks.find(d => d.id === code) || null;
 
