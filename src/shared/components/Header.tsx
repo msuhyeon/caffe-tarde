@@ -36,16 +36,16 @@ const Header = () => {
                   className={`cursor-pointer relative flex gap-10 ${expanded && 'text-[#505e54]'}`}
                 >
                   {menu?.linkUrl ? (
-                    <Link href={menu?.linkUrl}>
+                    <Link href={menu?.linkUrl} className="p-5">
                       <span className="hover:font-medium">{menu.label}</span>
                     </Link>
                   ) : (
-                    <span className="hover:font-medium">{menu.label}</span>
+                    <span className="hover:font-medium p-5">{menu.label}</span>
                   )}
                   <ul className="absolute left-0 top-full w-full z-40 pt-7 ">
                     {menu.subItems.map((sub, subIndex) => (
                       <li key={subIndex} className="pt-5 hover:text-rose-700">
-                        <Link href={sub.linkUrl} className="">
+                        <Link href={sub.linkUrl} className="p-5">
                           {sub.label}
                         </Link>
                       </li>

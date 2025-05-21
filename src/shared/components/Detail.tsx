@@ -35,9 +35,13 @@ const Detail = ({
             <hr className="border-neutral-300 my-6" />
             <div className="flex justify-between items-center mb-2">
               <h2 className="font-semibold text-lg">제품 영양 정보</h2>
-              <span className="text-sm text-neutral-500">
-                Small Size / {volume} 기준
-              </span>
+              {category === 'drinks' ? (
+                <span className="text-sm text-neutral-500">
+                  Small Size / {volume} 기준
+                </span>
+              ) : (
+                <span className="text-sm text-neutral-500">1개 기준</span>
+              )}
             </div>
             <ul className="grid grid-cols-2 gap-y-2 gap-x-10 text-sm text-neutral-700 mb-6">
               <li className="flex justify-between">
