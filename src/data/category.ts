@@ -31,6 +31,7 @@ export const category: CategoryType[] = [
   },
   {
     label: '고객 지원',
-    subItems: [{ label: '고객의 소리', linkUrl: '/cscldbgkrldnlgotj.' }],
+    linkUrl: '/faq',
+    subItems: [{ label: '자주 묻는 질문', linkUrl: '/faq' }],
   },
 ];
