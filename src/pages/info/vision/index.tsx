@@ -40,6 +40,15 @@ const Vision = () => {
           </div>
         </div>
       </div>
+      <div className="bg-rose-50 py-16 text-center mb-16 rounded-xl shadow">
+        <h4 className="text-sm font-medium text-rose-700 mb-2">중장기 비전</h4>
+        <p className="text-3xl font-bold text-rose-800">
+          Better Afternoon, Better Life
+        </p>
+        <p className="text-neutral-500 mt-2">
+          지속 가능한 따뜻한 오후의 문화를 만들어갑니다
+        </p>
+      </div>
       <div className="mb-16">
         <h3 className="text-xl font-bold mb-6">핵심가치</h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
