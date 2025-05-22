@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
-import { newsData } from '@/data/news';
+import { noticeData } from '@/data/notices';
 import { formatDate } from '@/lib/format';
 
 const MainBottom = () => {
@@ -67,14 +67,16 @@ const MainBottom = () => {
           </Link>
         </div>
         <ul className="mt-5 cursor-pointer">
-          {newsData.map((item, index) => (
+          {noticeData.map((item, index) => (
             <li
               className="text-neutral-500 pb-2 text-sm flex justify-between"
               key={index}
             >
-              <p className="hover:text-black ">
-                [{item.category}] {item.title}
-              </p>
+              <Link href={`/brand/notice/${item.id}`}>
+                <p className="hover:text-black">
+                  [{item.category}] {item.title}
+                </p>
+              </Link>
               <span>{formatDate(item.createdAt)}</span>
             </li>
           ))}

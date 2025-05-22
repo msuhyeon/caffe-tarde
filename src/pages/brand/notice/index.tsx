@@ -15,11 +15,11 @@ import {
   TableRow,
 } from '@/shared/components/ui/table';
 import Link from 'next/link';
-import { newsData } from '@/data/news';
+import { noticeData } from '@/data/notices';
 import { formatDate } from '@/lib/format';
 
 const NoticeList = () => {
-  const newsList = newsData.sort(function compare(a, b) {
+  const noticeList = noticeData.sort(function compare(a, b) {
     return parseInt(b.id) - parseInt(a.id);
   });
 
@@ -32,7 +32,7 @@ const NoticeList = () => {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>메뉴</BreadcrumbPage>
+            <BreadcrumbPage>공지사항</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
@@ -40,18 +40,18 @@ const NoticeList = () => {
       <Table className="w-[800px]">
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">No</TableHead>
+            <TableHead className="w-[100px] text-center">No</TableHead>
             <TableHead>내용</TableHead>
             <TableHead className="text-right">날짜</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {newsList.map(notice => (
+          {noticeList.map(notice => (
             <TableRow key={notice.id}>
-              <TableCell>{notice.id}</TableCell>
+              <TableCell className="text-center">{notice.id}</TableCell>
               <TableCell>
                 <Link
-                  href={`/notice/${notice.id}`}
+                  href={`/brand/notice/${notice.id}`}
                   className="text-[#505e54] hover:underline-offset-1"
                 >
                   <span className="mr-2 font-medium hover:not-underline">
