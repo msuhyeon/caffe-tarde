@@ -29,8 +29,6 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
     next: noticeData[index + 1] ?? null,
   };
 
-  console.log('data-', notice);
-
   return {
     props: { notice },
     revalidate: 60,
