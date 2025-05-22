@@ -7,3 +7,9 @@ export interface NoticeDetailType {
   createdAt: string;
   category?: '신메뉴' | '콜라보' | '공지' | '시즌메뉴';
 }
+
+export interface NoticeDataType {
+  prev: NoticeDetailType;
+  current: NoticeDetailType;
+  next: NoticeDetailType;
+}
