@@ -36,7 +36,7 @@ const NoticeList = () => {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <h2 className="text-2xl font-bold mb-6">공지 사항</h2>
+      <h2 className="text-2xl font-bold mb-6">공지사항</h2>
       <Table className="w-[800px]">
         <TableHeader>
           <TableRow>

@@ -12,8 +12,7 @@ import { formatDate } from '@/lib/format';
 
 const NoticeDetail = (notice: NoticeDataType) => {
   return (
-    <section className="w-[800px]">
-      <h1 className="text-3xl font-bold mb-6">공지사항</h1>
+    <section className="w-[800px] mt-10">
       <Breadcrumb>
         <BreadcrumbList className="flex justify-end">
           <BreadcrumbItem>
@@ -30,6 +29,7 @@ const NoticeDetail = (notice: NoticeDataType) => {
         </BreadcrumbList>
       </Breadcrumb>
       <div className="w-full">
+        <h2 className="text-2xl font-bold mb-6">공지사항</h2>
         <h2 className="text-xl font-semibold mb-2">{notice.current.title}</h2>
         <hr className="border-t border-neutral-300 mb-6" />
         <div className="text-sm leading-relaxed whitespace-pre-line text-[#333] mb-8">
