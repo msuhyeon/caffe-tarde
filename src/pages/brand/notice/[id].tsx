@@ -1,13 +1,13 @@
 import type { GetStaticProps, GetStaticPaths } from 'next';
-import NoticeDetail from '@/features/notice/Detail';
 import { useRouter } from 'next/router';
-import { NoticeDataType } from '@/shared/types/notice';
+import NoticeDetail from '@/features/notice/Detail';
 import { noticeData } from '@/data/notices';
+import type { NoticeDataType } from '@/shared/types/notice';
 
 export default function NoticePage({ notice }: { notice: NoticeDataType }) {
   const { isFallback } = useRouter();
 
-  if (isFallback) return <p>페이지 로딩중</p>;
+  if (isFallback) return <p>페이지 로딩 중...</p>;
 
   return <NoticeDetail {...notice} />;
 }
@@ -20,8 +20,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
-  const code = params!.id as string;
-  const index = noticeData.findIndex(item => item.id === code) || 0;
+  const code = params?.id as string;
+  const index = noticeData.findIndex(item => item.id === code);
+
+  if (index === -1) {
+    return { notFound: true };
+  }
+
   const notice = {
     prev: noticeData[index - 1] ?? null,
     current: noticeData[index],
@@ -31,6 +36,5 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
   return {
     props: { notice },
     revalidate: 60,
-    notFound: false,
   };
 };

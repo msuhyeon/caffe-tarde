@@ -29,7 +29,6 @@ const NoticeDetail = (notice: NoticeDataType) => {
         </BreadcrumbList>
       </Breadcrumb>
       <div className="w-full">
-        <h2 className="text-2xl font-bold mb-6">공지사항</h2>
         <h2 className="text-xl font-semibold mb-2">{notice.current.title}</h2>
         <hr className="border-t border-neutral-300 mb-6" />
         <div className="text-sm leading-relaxed whitespace-pre-line text-[#333] mb-8">

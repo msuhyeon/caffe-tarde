@@ -27,7 +27,7 @@ export const category: CategoryType[] = [
     linkUrl: '/brand/notice',
     subItems: [
       { label: '공지사항', linkUrl: '/brand/notice' },
-      { label: '이벤트 안내', linkUrl: '/brand/event' },
+      { label: '이벤트', linkUrl: '/brand/event' },
       { label: '사회공헌 활동', linkUrl: '/brand/csp' },
     ],
   },

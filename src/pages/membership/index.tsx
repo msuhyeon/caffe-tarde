@@ -89,6 +89,9 @@ const MemberShip = () => {
               <p className="mt-2 font-medium text-yellow-700">
                 구매 금액의 3% 적립
               </p>
+              <p className="mt-2 font-medium text-yellow-700">
+                생일 축하 쿠폰 발급(3만원 이상 구매 시 3%할인)
+              </p>
             </li>
             <li className="rounded-xl border border-zinc-500 p-6 text-center shadow-sm">
               <div className="mb-2">
@@ -99,6 +102,9 @@ const MemberShip = () => {
               <p className="mt-2 font-medium text-zinc-500">
                 구매 금액의 4% 적립
               </p>
+              <p className="mt-2 font-medium text-zinc-500">
+                생일 축하 쿠폰 발급(3만원 이상 구매 시 5%할인)
+              </p>
             </li>
             <li className="rounded-xl border border-amber-500 p-6 text-center shadow-sm">
               <div className="mb-2">
@@ -108,6 +114,9 @@ const MemberShip = () => {
               <p>최근 1년 포인트 7,000점 이상</p>
               <p className="mt-2 font-medium text-amber-500">
                 구매 금액의 5% 적립
+              </p>{' '}
+              <p className="font-medium text-amber-500 mt-2">
+                5천원 할인 생일 축하 쿠폰 발급
               </p>
             </li>
           </ul>

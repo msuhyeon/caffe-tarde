@@ -13,8 +13,8 @@ export default function DrinkPage({ drink }: { drink: DetailTypes }) {
 // 미리 생성X 요청 들어오면 페이지 생성
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [], // 미리 생성할 경로 없음: ID가 매번 달라지니까
-    fallback: 'blocking', // 요청 오면 서버에서 만들고 캐시 -> .next 에 저장됨
+    paths: [], // 모든 경로를 사전에 빌드하지 않음, 미리 생성할 경로 없음: ID가 매번 달라지니까
+    fallback: 'blocking', // 최초 접근 시 서버에서 빌드, 요청 오면 서버에서 만들고 캐시 -> .next 에 저장됨
   };
 };
 
