@@ -7,7 +7,7 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from '@/shared/components/ui/breadcrumb';
-import Detail from '@/shared/components/Detail';
+import Detail from '@/shared/components/ProductDetail';
 
 const DrinkDetail = (drink: DetailTypes) => {
   return (
