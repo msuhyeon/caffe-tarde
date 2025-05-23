@@ -1,30 +1,34 @@
 # ☕ CAFFE-TARDE
 
-### 디렉토리 구조
-
+### 📦 프로젝트 구조 개요
 ```
-CAFFE-TARDE/
-├── public/               # 정적 파일
-│ └── images/            # 메인 배너 등 이미지 리소스
+.
+├── public/                  # 정적 리소스 (이미지, 아이콘 등)
+│   └── images/              # 각종 이미지 에셋
+│
 ├── src/
-│   ├── components/            # 재사용 가능한 UI 컴포넌트
-│ ├── features/          # 페이지별 섹션 기능 컴포넌트
-│ │ ├── home/           # 홈화면 전용 섹션 (MainBanner 등)
-│ │ ├── drinks/         # 음료 관련 기능
-│ │ └── news/           # 공지사항, 이벤트 관련
-│ ├── lib/               # 유틸 함수 및 공통 로직
-│ ├── pages/             # Next.js 라우팅
-│ │ ├── index.tsx       # 메인 페이지 진입점
-│ │ └── api/            # API 라우트 (선택적 사용)
-│ ├── shared/
-│ │ └── components/     # 재사용 가능한 컴포넌트
-│ │ └── ui/             # 버튼, 캐러셀 등 공통 UI 컴포넌트
-│ ├── store/             # Zustand 등 전역 상태 관리
-│ └── styles/            # 전역 스타일, Tailwind 설정 등
-├── README.md
-├── next.config.js        # Next.js 설정
-├── postcss.config.mjs    # Tailwind 설정
-├── tsconfig.json         # TypeScript 설정
+│   ├── data/                # 메뉴, 공지사항, FAQ 등 목업 데이터
+│   ├── features/            # 페이지별 UI/로직 분리 (도메인 단위 구성)
+│   │   ├── home/            # 홈 화면 관련 기능
+│   │   ├── menu/            # 메뉴 상세 페이지 기능
+│   │   └── notice/          # 공지사항 목록 및 상세 기능
+│   ├── lib/                 # 유틸 함수 및 포맷 관련 함수
+│   ├── pages/               # Next.js 페이지 라우트
+│   │   ├── brand/           # 브랜드 소개 관련 페이지
+│   │   ├── customer/        # 고객 지원/문의 페이지
+│   │   ├── faq/             # 자주 묻는 질문
+│   │   ├── info/            # 회사 소개 (비전/품질)
+│   │   ├── membership/      # 멤버십 안내
+│   │   └── menu/            # 메뉴 리스트 및 상세
+│   ├── shared/
+│   │   ├── components/      # 공통 UI 컴포넌트
+│   │   └── types/           # TypeScript 인터페이스 정의
+│   ├── store/               # 전역 상태 관리 (예: Zustand 등)
+│   └── styles/              # 전역 CSS (Tailwind + 커스텀)
+│
+├── .config files            # ESLint, Prettier, PostCSS, TypeScript 설정
+├── package.json             # 프로젝트 메타 및 의존성 정의
+└── README.md                # 프로젝트 개요 및 설명
 ```
 
 ### 기술 스택
@@ -40,9 +44,8 @@ CAFFE-TARDE/
 ### 작업 중인 섹션 (홈)
 
 - [x] 헤더 / 푸터
-- [ ] 메인 배너
-- [ ] 이달의 베스트 메뉴
-- [ ] 시즌 한정 메뉴
+- [x] 메인 배너
+- [x] 이달의 베스트 메뉴
 - [ ] 매장 찾기
-- [ ] 멤버십 안내
+- [x] 멤버십 안내
 - [ ] 인스타그램 피드 연동
