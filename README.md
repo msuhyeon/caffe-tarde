@@ -33,7 +33,7 @@
 
 ### 기술 스택
 
-- **Next.js 13+**
+- **Next.js 15**
 - **TypeScript**
 - **TailwindCSS**
 - **ShadCN UI**
