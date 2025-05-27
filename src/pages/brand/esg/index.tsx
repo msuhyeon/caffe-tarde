@@ -1,6 +1,6 @@
 import { WandSparkles } from 'lucide-react';
 
-const Csp = () => {
+const Esg = () => {
   return (
     <section className="mt-10 w-[800px] flex justify-center items-center opacity-0 translate-y-4 animate-fade-down">
       <p className="font-semibold text-3xl transition-all duration-700 ease-out">
@@ -11,4 +11,4 @@ const Csp = () => {
   );
 };
 
-export default Csp;
+export default Esg;

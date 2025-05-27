@@ -28,12 +28,12 @@ export const category: CategoryType[] = [
     subItems: [
       { label: '공지사항', linkUrl: '/brand/notice' },
       { label: '이벤트', linkUrl: '/brand/event' },
-      { label: '사회공헌 활동', linkUrl: '/brand/csp' },
+      { label: 'ESG 활동', linkUrl: '/brand/esg' },
     ],
   },
   {
     label: '고객 지원',
     linkUrl: '/faq',
-    subItems: [{ label: '자주 묻는 질문', linkUrl: '/faq' }],
+    subItems: [{ label: 'FAQ', linkUrl: '/faq' }],
   },
 ];
