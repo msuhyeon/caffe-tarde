@@ -17,7 +17,7 @@ const Menu = () => {
   });
 
   return (
-    <section className="mt-10">
+    <section className="lg:mt-10">
       <Breadcrumb>
         <BreadcrumbList className="justify-end">
           <BreadcrumbItem>
@@ -30,10 +30,10 @@ const Menu = () => {
         </BreadcrumbList>
       </Breadcrumb>
       <ul className="w-full mb-10 flex">
-        <li className="border-1 border-[#505e54] w-full p-4 text-center bg-[#505e54] text-white">
+        <li className="border-1 border-[#505e54] border-r-0 w-full p-4 text-center hover:bg-rose-700 hover:text-white">
           <Link href="/menu/drinks">음료</Link>
         </li>
-        <li className="border-1 border-[#505e54] w-full p-4 text-center">
+        <li className="border-1 border-[#505e54] w-full p-4 text-center hover:bg-rose-700 hover:text-white">
           <Link href="/menu/deserts">디저트</Link>
         </li>
       </ul>

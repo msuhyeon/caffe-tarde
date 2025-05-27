@@ -2,18 +2,18 @@ import Image from 'next/image';
 
 const Quality = () => {
   return (
-    <div className="w-full mx-auto px-4 py-20">
-      <section className="text-center mb-20">
-        <h1 className="text-3xl font-bold text-[#505e54] mb-4">
+    <section className="w-full mx-auto lg:px-4 lg:py-20 py-10 px-3">
+      <div className="text-center lg:mb-20 mb-10">
+        <h1 className="lg:text-3xl text-2xl font-bold text-[#505e54] mb-4">
           우리가 지키는 품질
         </h1>
-        <p className="text-base text-[#505e54]">
+        <p className="lg:text-md text-sm text-[#505e54]">
           따르데는 ‘정직한 한 잔’을 위해 원두에서 베이커리까지
           <br />
           모든 순간에 책임을 다합니다.
         </p>
-      </section>
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center mb-16">
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center mb-16">
         <Image
           className="w-full h-[240px] object-cover rounded-lg"
           src="/images/coffee_tree.png"
@@ -33,8 +33,8 @@ const Quality = () => {
             지켜갑니다.
           </p>
         </div>
-      </section>
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center mb-16">
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center mb-16">
         <div className="order-2 sm:order-1">
           <h3 className="text-xl font-bold text-[#505e54] mb-2">
             정직한 거래, 투명한 공급
@@ -51,8 +51,8 @@ const Quality = () => {
           alt="공정무역"
           className="w-full h-[240px] object-cover rounded-lg order-1 sm:order-2"
         />
-      </section>
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center mb-16">
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center mb-16">
         <Image
           className="w-full h-[240px] object-cover rounded-lg"
           src="/images/barista.png"
@@ -71,8 +71,8 @@ const Quality = () => {
             추출 시간, 온도, 비율까지 정밀하게 관리하며 최고의 맛을 유지합니다.
           </p>
         </div>
-      </section>
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center mb-20">
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center mb-20">
         <div className="order-2 sm:order-1">
           <h3 className="text-xl font-bold text-[#505e54] mb-2">
             당일 생산, 당일 제공
@@ -89,14 +89,14 @@ const Quality = () => {
           alt="베이커리"
           className="w-full h-[240px] object-cover rounded-lg order-1 sm:order-2"
         />
-      </section>
-      <section className="text-center">
+      </div>
+      <div className="text-center">
         <blockquote className="text-[#505e54] italic text-xl font-semibold">
           “좋은 커피는 좋은 재료에서,
           <br /> 좋은 브랜드는 정직한 마음에서 시작됩니다.”
         </blockquote>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

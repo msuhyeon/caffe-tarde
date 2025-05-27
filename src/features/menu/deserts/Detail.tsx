@@ -11,7 +11,7 @@ import Detail from '@/shared/components/ProductDetail';
 
 const DesertDetail = (desert: DetailTypes) => {
   return (
-    <section className="mt-10">
+    <section className="lg:mt-10">
       <Breadcrumb>
         <BreadcrumbList className="justify-end">
           <BreadcrumbItem>

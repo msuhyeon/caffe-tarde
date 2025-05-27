@@ -9,7 +9,7 @@ import {
 
 const Vision = () => {
   return (
-    <section className="w-full mt-10">
+    <section className="w-full lg:mt-10">
       <Breadcrumb>
         <BreadcrumbList className="justify-end">
           <BreadcrumbItem>
@@ -22,7 +22,7 @@ const Vision = () => {
         </BreadcrumbList>
       </Breadcrumb>
       <div className="mb-16">
-        <h2 className="text-5xl font-extrabold expanded text-black-500 mb-15 text-center">
+        <h2 className="lg:text-5xl text-4xl font-extrabold expanded text-black-500 mb-15 text-center">
           TARDE COFFEE
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
@@ -42,7 +42,7 @@ const Vision = () => {
       </div>
       <div className="bg-rose-50 py-16 text-center mb-16 rounded-xl shadow">
         <h4 className="text-sm font-medium text-rose-700 mb-2">중장기 비전</h4>
-        <p className="text-3xl font-bold text-rose-800">
+        <p className="lg:text-3xl text-2xl font-bold text-rose-800">
           Better Afternoon, Better Life
         </p>
         <p className="text-neutral-500 mt-2">

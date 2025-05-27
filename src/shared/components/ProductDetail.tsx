@@ -13,8 +13,8 @@ const Detail = ({
   allergens,
 }: DetailTypes) => {
   return (
-    <div className="flex justify-between md:flex-row gap-10">
-      <div className="md:w-2/5 flex justify-center items-start ">
+    <div className="flex justify-between md:flex-row gap-10 flex-col">
+      <div className="md:w-2/5 flex justify-center items-start">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -69,7 +69,7 @@ const Detail = ({
                 <span>{nutrition.caffeine}</span>
               </li>
             </ul>
-            <p className="bg-neutral-200 text-sm text-neutral-800  px-4 py-3 mb-6 rounded">
+            <p className="bg-neutral-200 text-sm text-neutral-800 px-4 py-3 mb-6 rounded">
               알레르기 주의 성분 안내:{allergens.join(', ')}
             </p>
           </div>

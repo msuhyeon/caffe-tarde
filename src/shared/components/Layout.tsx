@@ -11,7 +11,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Header />
 
       <main
-        className={`flex-1 ${isMainPage ? 'pt-0' : 'pt-[100px] pb-10 max-w-[1200px] mx-auto'}`}
+        className={`flex-1 ${isMainPage ? 'pt-0' : 'pt-[100px] pb-10 max-w-[1200px] mx-auto px-3'}`}
       >
         {children}
       </main>

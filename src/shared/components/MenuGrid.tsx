@@ -8,7 +8,7 @@ type MenuGridProps = {
 
 const MenuGrid = ({ sortedMenu }: MenuGridProps) => {
   return (
-    <div className="grid grid-cols-4 gap-6">
+    <div className="grid lg:grid-cols-4 lg:gap-6 grid-cols-2 gap-4">
       {sortedMenu.map(item => (
         <div key={item.id}>
           <div className="overflow-hidden">
@@ -26,9 +26,13 @@ const MenuGrid = ({ sortedMenu }: MenuGridProps) => {
             </Link>
           </div>
           <div className="py-5 bg-black-100">
-            <span className="text-xl font-semibold">{item.name}</span>
-            <p className="text-neutral-500 text-sm py-2">{item.englishName}</p>
-            <p className="">{item.description}</p>
+            <span className="xl:text-xl text-md font-semibold">
+              {item.name}
+            </span>
+            <p className="text-neutral-500 xl:text-sm text-xs py-2">
+              {item.englishName}
+            </p>
+            <p className="xl:text-md text-sm">{item.description}</p>
           </div>
         </div>
       ))}

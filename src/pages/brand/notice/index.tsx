@@ -24,7 +24,7 @@ const NoticeList = () => {
   });
 
   return (
-    <section className="mt-10">
+    <section className="lg:mt-10">
       <Breadcrumb>
         <BreadcrumbList className="justify-end">
           <BreadcrumbItem>
@@ -42,7 +42,7 @@ const NoticeList = () => {
           <TableRow>
             <TableHead className="w-[100px] text-center">No</TableHead>
             <TableHead>내용</TableHead>
-            <TableHead className="text-right">날짜</TableHead>
+            <TableHead className="text-right">게시일</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>

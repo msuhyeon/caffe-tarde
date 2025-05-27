@@ -4,6 +4,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
+  BreadcrumbPage,
 } from '@/shared/components/ui/breadcrumb';
 import { menu } from '@/data/menu';
 import MenuGrid from '@/shared/components/MenuGrid';
@@ -18,7 +19,7 @@ const Desert = () => {
   });
 
   return (
-    <section className="mt-10">
+    <section className="lg:mt-10">
       <Breadcrumb>
         <BreadcrumbList className="justify-end">
           <BreadcrumbItem>
@@ -27,6 +28,10 @@ const Desert = () => {
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink href="/menu">메뉴</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>디저트</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

@@ -9,7 +9,7 @@ function Breadcrumb({ ...props }: React.ComponentProps<'nav'>) {
     <nav
       aria-label="breadcrumb"
       data-slot="breadcrumb"
-      className="mb-10"
+      className="md:mb-10 mb-5"
       {...props}
     />
   );
