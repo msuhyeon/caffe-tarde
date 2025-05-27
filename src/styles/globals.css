@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -83,6 +83,11 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+html {
+  /* 스크롤바로 인한 레이아웃 밀림 현상 방지: scroll이 없어도 항상 자리를 차지 */
+  overflow-y: scroll;
 }
 
 body {
