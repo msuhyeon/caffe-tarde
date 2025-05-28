@@ -1,6 +1,5 @@
 const StoreLocator = () => {
-  return <>
-  </>;
+  return <></>;
 };
 
 export default StoreLocator;

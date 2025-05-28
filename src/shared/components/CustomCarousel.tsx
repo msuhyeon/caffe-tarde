@@ -57,8 +57,9 @@ const CustomCarousel = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-4 !p-8 [&>svg]:!h-8 [&>svg]:!w-8" />
-      <CarouselNext className="right-4 !p-8 [&>svg]:!h-8 [&>svg]:!w-8" />
+      {/* TODO: 모바일 시 비노출 되도록 수정 필요*/}
+      <CarouselPrevious className="left-4 lg:!p-8 lg:[&>svg]:!h-8 lg:[&>svg]:!w-8 " />
+      <CarouselNext className="right-4 lg:!p-8 lg:[&>svg]:!h-8 lg:[&>svg]:!w-8" />
     </Carousel>
   );
 };

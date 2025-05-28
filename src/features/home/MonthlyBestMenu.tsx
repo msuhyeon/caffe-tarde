@@ -16,38 +16,45 @@ const MonthlyBestMenu = () => {
   const items: DetailTypes[] = menu.slice(0, 4);
 
   return (
-    <section className="py-10">
+    <section className="lg:pt-10 pt-6">
       <h2 className="font-semibold text-2xl">이달의 베스트 메뉴</h2>
-      <div className="flex justify-between pt-10 gap-8">
+      <div className="grid grid-cols-2 xl:grid-cols-4 lg:gap-8 gap-4 lg:mt-10 mt-5">
         {items.map((item, index) => (
-          <Card className="flex-1 p-0 overflow-hidden rounded-sm" key={index}>
-            <div className="relative h-70 w-full">
-              <Image
-                src={item.imageSrc}
-                alt={item.imageAlt}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover"
-                priority
-              />
-            </div>
-            <CardHeader>
-              <CardTitle className="text-xl font-semibold">
-                {item.name}
-              </CardTitle>
-              <CardDescription>{item.description}</CardDescription>
-            </CardHeader>
-            <CardContent className="flex justify-between items-center">
-              {/* <p>{`${formatPrice(item.price)}원`}</p> */}
-              <Link
-                className="cursor-pointer py-2 px-4 rounded-sm border-1 text-sm"
-                href={`/menu/${item.category === 'drinks' ? 'drinks' : 'deserts'}/${item.id}`}
-              >
-                자세히 보기
-              </Link>
-            </CardContent>
-            <CardFooter />
-          </Card>
+          <Link
+            className="cursor-pointer"
+            href={`/menu/${item.category === 'drinks' ? 'drinks' : 'deserts'}/${item.id}`}
+          >
+            <Card className="p-0 overflow-hidden rounded-sm " key={index}>
+              <div className="relative xl:h-80 w-full">
+                <Image
+                  src={item.imageSrc}
+                  alt={item.imageAlt}
+                  width={400}
+                  height={400}
+                  className="object-cover"
+                  layout="responsive"
+                  priority
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="lg:text-xl text-sm lg:font-semibold font-normal mx-auto lg:ml-0">
+                  {item.name}
+                </CardTitle>
+                <CardDescription className="hidden lg:block lg:blck">
+                  {item.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex justify-between items-center hidden lg:blck">
+                {/* <Link
+                  className="cursor-pointer py-2 px-4 rounded-sm border text-sm"
+                  href={`/menu/${item.category === 'drinks' ? 'drinks' : 'deserts'}/${item.id}`}
+                >
+                  확인하기
+                </Link> */}
+              </CardContent>
+              <CardFooter />
+            </Card>
+          </Link>
         ))}
       </div>
     </section>

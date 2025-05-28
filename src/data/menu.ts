@@ -6,7 +6,8 @@ export const menu: DetailTypes[] = [
     category: 'drinks',
     name: '카페 라떼',
     englishName: 'Caffe Latte',
-    description: '우유 위에 달콤쌉싸름한 휘핑 커피 크림을 얹은 음료',
+    description:
+      '부드러운 우유 위에 커피 크림을 얹은, 입안 가득 번지는 달콤한 여운의 한 잔',
     volume: '355ml',
     imageSrc: '/images/latte.png',
     imageAlt: '카페 라떼 사진',
@@ -64,7 +65,8 @@ export const menu: DetailTypes[] = [
     category: 'drinks',
     name: '아이스 아메리카노',
     englishName: 'Iced Americano',
-    description: '시원한 에스프레소를 얼음과 함께 깔끔하게 즐기는 커피',
+    description:
+      '깊고 진한 에스프레소의 풍미를 시원하게 즐기는 클래식 아이스 커피',
     volume: '355ml',
     imageSrc: '/images/americano.png',
     imageAlt: '아이스 아메리카노 사진',

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="flex-grow  pt-[80px]">
       <MainBanner />
-      <div className="container mx-auto px-20 sm:px-10 lg:px-30">
+      <div className="container mx-auto px-8 md:px-20 lg:px-30">
         <MonthlyBestMenu />
         <MembershipBanner />
         <MainBottom />
