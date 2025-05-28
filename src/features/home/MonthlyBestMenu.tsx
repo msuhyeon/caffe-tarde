@@ -25,7 +25,7 @@ const MonthlyBestMenu = () => {
             href={`/menu/${item.category === 'drinks' ? 'drinks' : 'deserts'}/${item.id}`}
           >
             <Card className="p-0 overflow-hidden rounded-sm " key={index}>
-              <div className="relative xl:h-80 w-full">
+              <div className="relative xl:h-auto w-full">
                 <Image
                   src={item.imageSrc}
                   alt={item.imageAlt}
