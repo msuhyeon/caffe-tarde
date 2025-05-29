@@ -9,7 +9,7 @@ interface Props {
 
 const EventCard = ({ event }: Props) => {
   return (
-    <Link href={`/event/${event.id}`}>
+    <Link href={`/brand/event/${event.id}`}>
       <Card className="overflow-hidden hover:shadow-lg hover:scale-[1.01] transition-all cursor-pointer py-0">
         <CardContent className="p-0">
           <div className="relative">

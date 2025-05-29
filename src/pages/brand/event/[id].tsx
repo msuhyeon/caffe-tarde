@@ -1,10 +1,10 @@
 import type { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import EventDetail from '@/features/event/EventDetail';
-import { noticeData } from '@/data/notices';
+import { eventData } from '@/data/event';
 import { EventType } from '@/shared/types/event';
 
-export default function EventPage({ event }: { notice: EventType }) {
+export default function EventPage({ event }: { event: EventType }) {
   const { isFallback } = useRouter();
   if (isFallback) return <p>페이지 로딩 중...</p>;
 
@@ -20,20 +20,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
   const code = params?.id as string;
-  const index = noticeData.findIndex(item => item.id === code);
+  const event = eventData.find(item => item.id === code);
 
-  if (index === -1) {
+  if (!event) {
     return { notFound: true };
   }
 
-  const notice = {
-    prev: noticeData[index - 1] ?? null,
-    current: noticeData[index],
-    next: noticeData[index + 1] ?? null,
-  };
-
   return {
-    props: { notice },
+    props: { event },
     revalidate: 60,
   };
 };
