@@ -37,27 +37,35 @@ const NoticeList = () => {
         </BreadcrumbList>
       </Breadcrumb>
       <h2 className="text-2xl font-bold mb-6">공지사항</h2>
-      <Table className="w-[800px]">
+      <Table className="lg:w-[800px] table-fixed">
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px] text-center">No</TableHead>
-            <TableHead>내용</TableHead>
-            <TableHead className="text-right">게시일</TableHead>
+            <TableHead className="w-[100px] text-center hidden lg:block">
+              No
+            </TableHead>
+            <TableHead className="w-[75%] lg:w-[calc(100%-120px)]">
+              내용
+            </TableHead>
+            <TableHead className="w-[25%] lg:w-[120px] text-right">
+              게시일
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {noticeList.map(notice => (
             <TableRow key={notice.id}>
-              <TableCell className="text-center">{notice.id}</TableCell>
-              <TableCell>
+              <TableCell className="text-center hidden lg:block">
+                {notice.id}
+              </TableCell>
+              <TableCell className="w-full">
                 <Link
                   href={`/brand/notice/${notice.id}`}
-                  className="text-[#505e54] hover:underline-offset-1"
+                  className="block w-full max-w-full overflow-hidden whitespace-nowrap text-ellipsis text-[#505e54] hover:underline-offset-1"
                 >
                   <span className="mr-2 font-medium hover:not-underline">
                     [{notice.category}]
                   </span>
-                  {notice.title}
+                  <span className="inline">{notice.title}</span>
                 </Link>
               </TableCell>
               <TableCell className="text-sm text-neutral-400 text-right">

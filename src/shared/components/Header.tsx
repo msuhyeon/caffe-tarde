@@ -13,6 +13,7 @@ import {
   DrawerContent,
   DrawerTrigger,
 } from '@/shared/components/ui/drawer';
+import { DialogTitle } from '@radix-ui/react-dialog';
 
 import { category } from '@/data/category';
 import clsx from 'clsx';
@@ -70,7 +71,7 @@ const Header = () => {
             </ul>
           </nav>
           <div className="lg:hidden">
-            <Drawer direction="right">
+            <Drawer direction="right" open={open} onOpenChange={setOpen}>
               <DrawerTrigger asChild>
                 <button className="p-2" aria-label="Toggle mobile menu">
                   <Menu size={24} />
@@ -78,7 +79,9 @@ const Header = () => {
               </DrawerTrigger>
               <DrawerContent className="w-[300px]">
                 <div className="p-6">
-                  <h2 className="text-lg font-bold mb-4">메뉴</h2>
+                  <DialogTitle className="text-lg font-bold mb-4">
+                    메뉴
+                  </DialogTitle>
                   <ul className="space-y-4">
                     {category.map((menu, idx) => (
                       <li key={idx}>
@@ -86,6 +89,7 @@ const Header = () => {
                           <Link
                             href={menu.linkUrl}
                             className="block w-full px-3 py-2 rounded hover:bg-neutral-100 transition"
+                            onClick={() => setOpen(false)}
                           >
                             <span className="font-medium">{menu.label}</span>
                           </Link>
@@ -98,6 +102,7 @@ const Header = () => {
                               <Link
                                 href={sub.linkUrl}
                                 className="block w-full px-3 py-2 rounded hover:bg-neutral-100 transition"
+                                onClick={() => setOpen(false)}
                               >
                                 <span className="text-sm text-neutral-600 hover:text-black">
                                   {sub.label}
