@@ -22,7 +22,7 @@ const Quality = () => {
           alt="커피나무"
         />
         <div>
-          <h3 className="text-xl font-bold text-rose-700 mb-2">
+          <h3 className="text-xl font-bold text-[#505e54] mb-2">
             좋은 커피는, 좋은 산지에서
           </h3>
           <p className="text-sm text-neutral-700 leading-relaxed">
