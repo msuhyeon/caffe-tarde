@@ -27,7 +27,7 @@ const MemberShip = () => {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <Tabs defaultValue="membership" className="lg:w-[800px] w-[100%] mt-6">
+      <Tabs defaultValue="membership" className="w-[100%] mt-6">
         <TabsList className="w-full h-[50px] bg-[#f5f5f5]">
           <TabsTrigger value="membership" className="cursor-pointer">
             멤버십 안내

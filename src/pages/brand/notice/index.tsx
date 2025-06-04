@@ -37,27 +37,23 @@ const NoticeList = () => {
         </BreadcrumbList>
       </Breadcrumb>
       <h2 className="text-2xl font-bold mb-6">공지사항</h2>
-      <Table className="lg:w-[800px] table-fixed">
+      <Table className="w-full table-fixed">
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px] text-center hidden lg:block">
+            <TableHead className="hidden lg:table-cell w-[100px] text-center">
               No
             </TableHead>
-            <TableHead className="w-[75%] lg:w-[calc(100%-120px)]">
-              내용
-            </TableHead>
-            <TableHead className="w-[25%] lg:w-[120px] text-right">
-              게시일
-            </TableHead>
+            <TableHead className="w-full">내용</TableHead>
+            <TableHead className="w-[120px] text-right">게시일</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {noticeList.map(notice => (
             <TableRow key={notice.id}>
-              <TableCell className="text-center hidden lg:block">
+              <TableCell className="hidden lg:table-cell w-[100px] text-center">
                 {notice.id}
               </TableCell>
-              <TableCell className="w-full">
+              <TableCell>
                 <Link
                   href={`/brand/notice/${notice.id}`}
                   className="block w-full max-w-full overflow-hidden whitespace-nowrap text-ellipsis text-[#505e54] hover:underline-offset-1"

@@ -12,7 +12,7 @@ import { formatDate } from '@/lib/format';
 
 const NoticeDetail = (notice: NoticeDataType) => {
   return (
-    <section className="w-[800px] mt-10">
+    <section className="lg:mt-10">
       <Breadcrumb>
         <BreadcrumbList className="flex justify-end">
           <BreadcrumbItem>
@@ -63,8 +63,7 @@ const NoticeDetail = (notice: NoticeDataType) => {
         </div>
         <div className="flex justify-end mt-8">
           <Link href="/brand/notice">
-            {/* <button className="px-6 py-2 bg-[#505e54] text-white rounded-sm hover:bg-neutral-700 cursor-pointer"> */}
-            <button className="px-10 py-2 text-black rounded-sm border-1 border-black-700 transition-all duration-400 hover:bg-neutral-700 hover:text-white cursor-pointer">
+            <button className="px-5 lg:px-10 py-2 text-sm lg:text-md text-black rounded-sm border-1 border-black-700 transition-all duration-400 hover:bg-neutral-700 hover:text-white cursor-pointer">
               목록
             </button>
           </Link>

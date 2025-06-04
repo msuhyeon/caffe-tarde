@@ -11,7 +11,7 @@ import { formatDate } from '@/lib/format';
 
 const EventDetail = (event: EventType) => {
   return (
-    <section className="lg:w-[800px] lg:mt-10">
+    <section className="lg:mt-10">
       <Breadcrumb>
         <BreadcrumbList className="flex justify-end">
           <BreadcrumbItem>
