@@ -119,7 +119,7 @@ const Header = () => {
             </Drawer>
           </div>
           {/* Language 드롭다운 */}
-          <div className="invisible lg:flex items-center gap-4">
+          <div className="hidden lg:invisible lg:flex items-center gap-4">
             <DropdownMenu>
               <DropdownMenuTrigger className="text-sm font-medium border px-3 py-1 rounded-md hover:bg-gray-100">
                 Language
