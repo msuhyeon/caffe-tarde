@@ -24,12 +24,12 @@ const Event = () => {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>메뉴</BreadcrumbPage>
+            <BreadcrumbPage>이벤트</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <div className="w-[1200px]">
-        <div className="grid grid-cols-3 gap-6">
+      <div className="lg:w-[1200px]">
+        <div className="grid lg:grid-cols-3 gap-6">
           {eventList.map((item, index) => (
             <EventCard event={item} key={index} />
           ))}

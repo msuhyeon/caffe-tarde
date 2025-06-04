@@ -20,7 +20,9 @@ const EventCard = ({ event }: Props) => {
               width="200"
               height="100"
             />
-            <img />
+            {!event.isActive && (
+              <div className="absolute inset-0 bg-black/50 z-10" />
+            )}
             <span
               className={`absolute top-2 left-2 ${event.isActive ? 'bg-rose-700' : 'bg-zinc-500'} text-white text-xs px-2 py-0.5 rounded-full shadow-sm`}
             >
@@ -28,7 +30,7 @@ const EventCard = ({ event }: Props) => {
             </span>
           </div>
           <div className="p-4">
-            <h2 className="text-base font-semibold line-clamp-2">
+            <h2 className="text-sm lg:text-md font-semibold line-clamp-2">
               {event.title}
             </h2>
             <p className="text-xs text-neutral-400 mt-2">
